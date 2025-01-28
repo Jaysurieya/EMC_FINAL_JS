@@ -4,18 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        body{
+            text-align: center;
+        }
+    </style>
 </head>
-<body>
-    <p id="abc">---</p>
+<body bgcolor="cyan">
+    <p id="op">---</p>
     <button onclick="but(this)">JAY</button>
     <button onclick="but(this)">SURIEYA</button>
-    <button onclick="but(this)">T.Y.</button>
+    <button onclick="but(this)">TY</button>
 
     <script>
+        var op = document.getElementById("op")
         function but(button){
-            var x = document.getElementById(button.id)
-            var op = document.getElementById("abc")
-            op.textContent = x.value
+            op.textContent = button.textContent
+        }
     </script>
 </body>
 </html>
