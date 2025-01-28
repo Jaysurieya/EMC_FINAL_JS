@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TASK-1</title>
+    <style>
+        input{
+            padding-left:100px;
+            padding-right:50px;
+        }
+        p{
+            text-align:center;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body bgcolor="cyan">
+    <h1 style="text-align:center;">LIVE PRINTING</h1>
+    <div style="padding-left:210px;">
+    <input type="text" id="ip" placeholder="Enter your text here" onkeyup="show()">
+    </div>
+    <p id="op">...</p>
+
+    <script>
+        var output = document.getElementById("op")
+        function show(){
+            var x = document.getElementById("ip").value
+            output.textContent=x
+        }
+    </script>
+</body>
+</html>
