@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            text-align: center;
+        }
+    </style>
+</head>
+<body bgcolor="cyan">
+    <h1>ADD AND REMOVE</h1>
+    <button onclick="add()">ADD</button>
+    <BUTTON onclick="remove()">REMOVE</BUTTON>
+    <div></div>
+
+    <script>
+        function add(){
+            var p = document.createElement("p")
+            p.textContent = "hello"
+            p.id="abc"
+            console.log(p.id)
+            document.body.appendChild(p)
+        }
+        function remove(){
+            var x = document.getElementById("abc")
+            x.remove()
+        }
+    </script>
+
+</body>
+</html>
