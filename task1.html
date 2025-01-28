@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess the number game</title>
+    <style>
+        body{
+            text-align: center;
+        }
+    </style>
+</head>
+<body bgcolor="cyan">
+    <h1>GUESS THE NUMBER</h1>
+    <input id="ip" type="number" placeholder="Enter the number">
+    <button onclick="but()">GUESS</button>
+    <p>YOUR SCORE:</p>
+    <p id="op" style="border: 2px solid black"> -- </p>
+    <script>
+        var a = (Math.random())*10
+        var num = (Math.floor(a))+1
+        console.log(num)
+        var p = document.getElementById("op")
+        score=10
+        function but(){
+            var ip = document.getElementById("ip")
+            var x = ip.value
+            if(x==num){
+                alert("!!!YOU WON!!!\nYOYR SCORE:"+score)
+            }
+            else if(score==0){
+                alert("!!!YOU LOSE ,CONTINUE!!!")
+            }
+            else{
+                score--
+                p.textContent = score
+            }
+        }
+
+    </script>
+</body>
+</html>
