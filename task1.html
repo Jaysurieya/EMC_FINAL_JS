@@ -14,6 +14,8 @@
     <h1>GUESS THE NUMBER</h1>
     <input id="ip" type="number" placeholder="Enter the number">
     <button onclick="but()">GUESS</button>
+    <p>correct/wrong:</p>
+    <p id="op1" style="border: 2px solid black"> -- </p>
     <p>YOUR SCORE:</p>
     <p id="op" style="border: 2px solid black"> -- </p>
     <script>
@@ -21,11 +23,13 @@
         var num = (Math.floor(a))+1
         console.log(num)
         var p = document.getElementById("op")
+        var p1 = document.getElementById("op1")
         score=10
         function but(){
             var ip = document.getElementById("ip")
             var x = ip.value
             if(x==num){
+                p1.textContent = "Correct"
                 alert("!!!YOU WON!!!\nYOYR SCORE:"+score)
             }
             else if(score==0){
@@ -34,6 +38,7 @@
             else{
                 score--
                 p.textContent = score
+                p1.textContent = "Wrong"
             }
         }
 

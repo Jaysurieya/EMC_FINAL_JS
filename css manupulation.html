@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS MANUPULATION</title>
+    <style>
+        div{
+            height:100px;
+            width:100px;
+            background-color:black;
+        }
+        .widthmax{
+            transition: 2s;
+            width:100%;
+        }
+        .w{
+            transition:2s;
+            width:100px;
+        }
+    </style>
+</head>
+<body>
+    <div id="division"></div>
+    <button onmouseenter="change()" onmouseleave="back()">change</button>
+    <button onclick="width()" ondblclick="width_back()">width</button>
+
+    <script>
+    var css = document.getElementById("division")
+    function change(){
+        css.style.backgroundColor = "red";
+    }
+    function back(){
+        css.style.backgroundColor = "black";
+    }
+    function width(){
+        css.setAttribute("class","widthmax");
+    }
+    function width_back(){
+        css.setAttribute("class","w")
+    }
+    </script>
+</body>
+</html>
