@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="abc">---</p>
+    <button onclick="but(this)">JAY</button>
+    <button onclick="but(this)">SURIEYA</button>
+    <button onclick="but(this)">T.Y.</button>
+
+    <script>
+        function but(button){
+            var x = document.getElementById(button.id)
+            var op = document.getElementById("abc")
+            op.textContent = x.value
+    </script>
+</body>
+</html>
